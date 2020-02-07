@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     due_date: DataTypes.DATE,
     UserId: DataTypes.INTEGER
   }, { sequelize });
+  // Testing favorite
   Favorite.associate = function (models) {
     Favorite.belongsTo(models.User)
     // associations can be defined here

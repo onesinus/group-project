@@ -14,15 +14,19 @@ class UsersController {
                 if (user && isAuthorized(password, user.password)) {
                     res.status(200).json({token: "disini kasih token ya"});                    
                 }else{
-                    res.send(user);
                     throw {
                         statusCode: 404,
-                        message: "Invalid email or password"
+                        errors: [
+                            {
+                                message: "Invalid email or password"
+                            }
+                        ]
                     }
                 }
             })
             .catch(err => {
-                next(err.message);
+                res.status(err.statusCode).json(err.errors[0].message);
+                // next(err.errors.msg);
             });
     }   
 
@@ -34,7 +38,7 @@ class UsersController {
                 res.status(201).json(resAdd);
             })
             .catch(err => {
-                res.status(400).json(err);
+                res.status(400).json(err.errors[0].message);
             });
     }
 }
