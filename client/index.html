@@ -1,103 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Favorite Sport</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/login_register.css">
-    </head>
-    <body>
-        <!-- Register and Login Page -->
-        <div class="container col-md-12 register" style="display: none;">
-            <div class="row col-md">
-                <div class="col-md-3 register-left">
-                    <img src="img/logo_white.png" alt="Image Login Page"/>
-                    <h3>Welcome</h3>
-                    <p>You are 30 seconds away to get your account!</p>
-                    <input type="submit" name="" value="Mantul" style="display: none"/><br/>
-                </div>
-                <div class="col-md-9 register-right">
-                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                        <li class="nav-item">
-                            <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
-                        </li>
-                    </ul>
-                    <div class="tab-content" id="myTabContent">
-                        <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
-                            <h3 class="register-heading">Register Form</h3>
-                            <div class="row register-form">
-                                <div class="col-md-12">
-                                    <div class="alert alert-success" role="alert" style="display: none;">
-                                        This is a success alert—check it out!
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control email" placeholder="Email" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control password" placeholder="Password" />
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
-                                    <input type="submit" id="btnRegister" class="btnRegister"  value="Register"/>
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Favorite Sport</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/login_register.css">
+</head>
+
+<body>
+    <!-- Register and Login Page -->
+    <div class="container col-md-12 register" style="display: none;">
+        <div class="row col-md">
+            <div class="col-md-3 register-left">
+                <img src="img/logo_white.png" alt="Image Login Page" />
+                <h3>Welcome</h3>
+                <p>You are 30 seconds away to get your account!</p>
+                <input type="submit" name="" value="Mantul" style="display: none" /><br />
+            </div>
+            <div class="col-md-9 register-right">
+                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab"
+                            aria-controls="register" aria-selected="true">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab"
+                            aria-controls="login" aria-selected="false">Login</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <h3 class="register-heading">Register Form</h3>
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <div class="alert alert-success" role="alert" style="display: none;">
+                                    This is a success alert—check it out!
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control email" placeholder="Email" />
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control password" placeholder="Password" />
                                 </div>
                             </div>
+                            <div class="col-md-8">
+                                <input type="submit" id="btnRegister" class="btnRegister" value="Register" />
+
+                            </div>
                         </div>
-                        <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
-                            <h3  class="register-heading">Login Form</h3>
-                            <div class="row register-form">
-                                <div class="col-md-12">
-                                    <div class="alert alert-success" role="alert" style="display: none;">
-                                        This is a success alert—check it out!
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control email" placeholder="Email" />
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" class="form-control password" placeholder="Password" />
-                                    </div>
+                    </div>
+                    <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        <h3 class="register-heading">Login Form</h3>
+                        <div class="row register-form">
+                            <div class="col-md-12">
+                                <div class="alert alert-success" role="alert" style="display: none;">
+                                    This is a success alert—check it out!
                                 </div>
-                                <div class="col-md-8">
-                                    <input type="submit" id="btnLogin" class="btnRegister"  value="Login"/>
+                                <div class="form-group">
+                                    <input type="text" class="form-control email" placeholder="Email" />
                                 </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control password" placeholder="Password" />
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <input type="submit" id="btnLogin" class="btnRegister" value="Login" />
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Register and Login Page -->
+    </div>
+    <!-- End Register and Login Page -->
 
-        <!-- Calendar Page -->
-        <div class="calendar-page" style="display: none;">
-            <h1 class="align-center">Holidays</h1>
-            <div class="alert alert-success" role="alert" style="display: none;">
-                This is a success alert—check it out!
-            </div>           
-            <table class="table" id="tableHoliday">
-                <thead class="thead-dark">
-                  <tr>
+    <!-- Calendar Page -->
+    <div class="calendar-page" style="display: none;">
+        <h1 class="align-center">Holidays</h1>
+        <div class="alert alert-success" role="alert" style="display: none;">
+            This is a success alert—check it out!
+        </div>
+        <table class="table" id="tableHoliday">
+            <thead class="thead-dark">
+                <tr>
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
                     <th scope="col">Description</th>
                     <th scope="col">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <th scope="col" colspan="6"></th>
-                    </tr>
-                </tfoot>
-              </table>
-              <!-- <h1 class="align-center">Weekdays</h1>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="col" colspan="6"></th>
+                </tr>
+            </tfoot>
+        </table>
+        <!-- <h1 class="align-center">Weekdays</h1>
               <table class="table">
                 <thead class="thead-light">
                   <tr>
@@ -133,20 +137,43 @@
                     </tr>
                 </tfoot>
               </table> -->
+    </div>
+    <!-- End Calendar Page -->
+    <!-- Football Page -->
+    <div id="football" class="container" style="background-color: cornflowerblue; min-height: 300px;">
+        <h2 class="text-center">Barclays Premier League</h2>
+        <div style="margin-left: 40%;">
+            <form>
+                <input type="date" id="football_date">
+                <button id="formSearchFootball" type="button" class="btn btn-warning">Search</button>
+            </form>
         </div>
-        <!-- End Calendar Page -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        
-        <script src="config/url.js"></script>
-        <script src="js/common.js"></script>
-        <script src="js/notification.js"></script>
-        <script src="js/display-page.js"></script>
-        <script src="js/main.js"></script>
+        <div class="row" id="getFixtures" style="border: ;">
 
-        <script src="js/calendar-page.js"></script>
-        <script src="js/football.js"></script>
+        </div>
+    </div>
+    <!-- End Football Page -->
+    <!-- Favorites -->
+    <div id="favorites" class="container mt-5" style="background-color: bisque;">
+        <h2 class="text-center">My Favorites</h2>
+        <div class="row" id="getFavorites">
 
-    </body>
+        </div>
+    </div>
+    <!-- End Favorites Page -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="config/url.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/display-page.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="js/calendar-page.js"></script>
+    <script src="js/football.js"></script>
+
+</body>
+
 </html>

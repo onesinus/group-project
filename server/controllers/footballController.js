@@ -61,13 +61,14 @@ class Football {
 
     static addToFavorite(req, res, next) {
         const obj = {
-            footballTeamAway: req.body.footballTeamAway,
-            footballTeamHome: req.body.footballTeamHome,
-            footballTeamAwayLogo: req.body.footballTeamAwayLogo,
-            footballTeamHomeLogo: req.body.footballTeamHomeLogo,
+            footballTeamAway: req.body.teamAway,
+            footbalTeamHome: req.body.teamHome,
+            footbalTeamAwayLogo: req.body.awayLogo,
+            footballTeamHomeLogo: req.body.homeLogo,
             due_date: req.body.due_date,
-            UserId: req.body.UserId
+            UserId: 1
         }
+        console.log(obj)
         Favorite.create(obj)
             .then(data => {
                 res.status(201).json(data)

@@ -5,5 +5,5 @@ function display(page) {
 
 function clearPage() {
     $('.register').hide();
-    $('[class^=-page]').hide();    
+    $('[class^=-page]').hide();
 }
