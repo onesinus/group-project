@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 
 /* Require Routes */
 const userRoute = require('./routes/Users');
+const routes    = require('./routes');
 
 app.use(cors());
 app.use('/users', userRoute);
