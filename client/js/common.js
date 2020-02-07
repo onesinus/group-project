@@ -7,10 +7,10 @@ function clearForm() {
 }
 
 function getFormInput(elem) {
-    let $form       = $(elem).parent().parent();
-    let email       = $form.find('.email').val();
-    let password    = $form.find('.password').val();
-    return {email, password};
+    let $form = $(elem).parent().parent();
+    let email = $form.find('.email').val();
+    let password = $form.find('.password').val();
+    return { email, password };
 }
 
 function checkLogin() {
