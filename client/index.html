@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/login_register.css">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>    
     </head>
     <body>
         <!-- Register and Login Page -->
@@ -45,7 +48,7 @@
                                 </div>
                                 <div class="col-md-8">
                                     <input type="submit" id="btnRegister" class="btnRegister"  value="Register"/>
-
+                                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                                 </div>
                             </div>
                         </div>
