@@ -1,4 +1,7 @@
 $(document).ready(function() {
+    clearPage();
+    checkLogin();
+
     $("#btnRegister").on('click', function() {
         const {email, password} = getFormInput($(this));
         register(email, password);
@@ -38,11 +41,14 @@ $(document).ready(function() {
             data: {email, password}
         })
         .then(res => {
+            let dataLogin = JSON.stringify({email, token: 'ini harusnya token'});
+            localStorage.setItem('data-login', dataLogin);
             clearForm();
             displayNotification({
                 type: 'success',
                 msg: 'User has been logged in!'
             });
+            display('.calendar-page');
         })
         .catch(err => {
             console.log(err);
