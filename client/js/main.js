@@ -1,7 +1,7 @@
 $(document).ready(function () {
     clearPage();
     checkLogin();
-    getFavorites()
+    getFavorites();
 
     $('#btn-search-event').click(function(e) {
         e.preventDefault()
@@ -17,6 +17,19 @@ $(document).ready(function () {
         const { email, password } = getFormInput($(this));
         login(email, password);
     });
+
+    $(document).on('click', ".btnBasketBall", function(){
+        display('.nba-event-page');
+        searchNBAEvent($(this).attr('date'));
+        $(this).closest('tr').next('tr').append("<tr>" + $(".nba-event-page") + "</tr>");
+    });
+
+    $(document).on('click', ".btnFootBall", function() {
+        display('#favorites');
+        display('#football');
+        getFixtures($(this).attr('date'));
+        $(this).closest('tr').next('tr').append("<tr>" + $("#getFixtures") + "</tr>");
+   });
 
 
     function register(email, password) {
