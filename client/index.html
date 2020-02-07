@@ -1,40 +1,151 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/login_register.css">
+    </head>
+    <body>
+        <!-- Register and Login Page -->
+        <div class="container col-md-12 register" style="display: none;">
+            <div class="row col-md">
+                <div class="col-md-3 register-left">
+                    <img src="img/logo_white.png" alt="Image Login Page"/>
+                    <h3>Welcome</h3>
+                    <p>You are 30 seconds away to get your account!</p>
+                    <input type="submit" name="" value="Mantul"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <h3 class="register-heading">Register Form</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="alert alert-success" role="alert" style="display: none;">
+                                        This is a success alert—check it out!
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control email" placeholder="Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="submit" id="btnRegister" class="btnRegister"  value="Register"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <h3  class="register-heading">Login Form</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="alert alert-success" role="alert" style="display: none;">
+                                        This is a success alert—check it out!
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control email" placeholder="Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="submit" id="btnLogin" class="btnRegister"  value="Login"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Register and Login Page -->
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Calendar Page -->
+        <div class="calendar-page" style="display: none;">
+            <h1 class="align-center">Holidays</h1>
+            <div class="alert alert-success" role="alert" style="display: none;">
+                This is a success alert—check it out!
+            </div>           
+            <table class="table" id="tableHoliday">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="col" colspan="6"></th>
+                    </tr>
+                </tfoot>
+              </table>
+              <!-- <h1 class="align-center">Weekdays</h1>
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="col" colspan="6"></th>
+                    </tr>
+                </tfoot>
+              </table> -->
+        </div>
+        <!-- End Calendar Page -->
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        
+        <script src="config/url.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/notification.js"></script>
+        <script src="js/display-page.js"></script>
+        <script src="js/main.js"></script>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="js/calendar-page.js"></script>
+        <script src="js/football.js"></script>
 
-    <title>Hello, world!</title>
-</head>
-<div id="football">
-    <div class="row">
-        <div class="col-3"></div>
-        <div class="col"></div>
-    </div>
-</div>
-
-<body>
-    <h1>Hello, world!</h1>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-        </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/football.js"></script>
-</body>
-
+    </body>
 </html>
