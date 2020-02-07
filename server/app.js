@@ -3,35 +3,22 @@ const cors      = require('cors');
 const app       = express()
 const port      = 3000
 
-<<<<<<< HEAD
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const port = 3000
-const cors = require('cors')
-const routes = require('./routes')
 
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-=======
+require('dotenv').config()
+const routes    = require('./routes')
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors())
 
 /* Require Routes */
 const userRoute = require('./routes/Users');
+const apiNbaRoute = require('./routes/ApiNba');
 
 app.use(cors());
 app.use('/users', userRoute);
-/* End Require Routes */
->>>>>>> 56d6a629213ad41d63d65da1dfd755544907f1a0
-
+app.use('/api-nba', apiNbaRoute);
 app.use('/', routes)
+/* End Require Routes */
 
-
-<<<<<<< HEAD
 app.listen(port, () => console.log(`App listening on port ${port}!`))
-=======
-app.listen(port, () => console.log(`App listening on port ${port}!`));
->>>>>>> 56d6a629213ad41d63d65da1dfd755544907f1a0
