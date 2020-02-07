@@ -16,7 +16,6 @@ function getFormInput(elem) {
 function checkLogin() {
     if (localStorage.getItem("data-login")) {
         display('.calendar-page');
-        display('.nba-event-page');
     }else{
         display('.register');
     }
