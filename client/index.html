@@ -1,44 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Favorite Sport</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/login_register.css">
-</head>
-
-<body>
-    <!-- Register and Login Page -->
-    <div class="container col-md-12 register" style="display: none;">
-        <div class="row col-md">
-            <div class="col-md-3 register-left">
-                <img src="img/logo_white.png" alt="Image Login Page" />
-                <h3>Welcome</h3>
-                <p>You are 30 seconds away to get your account!</p>
-                <input type="submit" name="" value="Mantul" style="display: none" /><br />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Favorite Sport</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/login_register.css">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="131639698609-99o7nf91btgtjt7ahjck4326s3oqmrue.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>    
+    </head>
+    <body>
+        <!-- search nba event -->
+        <div id="search-NBA-event" class="container nba-event-page" style="display: none;">
+            <div class="row">
+                <input type="date" class="form-control col-4 w-25" id="date-event" placeholder="Type Date Event">
+                <button type="submit" class="btn btn-success col-2" id="btn-search-event">Search</button>
             </div>
-            <div class="col-md-9 register-right">
-                <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
-                    <li class="nav-item">
-                        <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab"
-                            aria-controls="register" aria-selected="true">Register</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab"
-                            aria-controls="login" aria-selected="false">Login</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
-                        <h3 class="register-heading">Register Form</h3>
-                        <div class="row register-form">
-                            <div class="col-md-12">
-                                <div class="alert alert-success" role="alert" style="display: none;">
-                                    This is a success alert—check it out!
+            <div class="row" id="search-NBA-event-list">
+
+            </div>
+
+        </div>
+        <!-- end of search nba event -->
+
+        <!-- Register and Login Page -->
+        <div class="container col-md-12 register" style="display: none;">
+            <div class="row col-md">
+                <div class="col-md-3 register-left">
+                    <img src="img/logo_white.png" alt="Image Login Page"/>
+                    <h3>Welcome</h3>
+                    <p>You are 30 seconds away to get your account!</p>
+                    <input type="submit" name="" value="Mantul" style="display: none"/><br/>
+                </div>
+                <div class="col-md-9 register-right">
+                    <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="true">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="false">Login</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="register" role="tabpanel" aria-labelledby="register-tab">
+                            <h3 class="register-heading">Register Form</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="alert alert-success" role="alert" style="display: none;">
+                                        Ok
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control email" placeholder="Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control password" placeholder="Password" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="submit" id="btnRegister" class="btnRegister"  value="Register"/>
                                 </div>
                                 <div class="form-group">
                                     <input type="text" class="form-control email" placeholder="Email" />
@@ -52,16 +74,23 @@
 
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
-                        <h3 class="register-heading">Login Form</h3>
-                        <div class="row register-form">
-                            <div class="col-md-12">
-                                <div class="alert alert-success" role="alert" style="display: none;">
-                                    This is a success alert—check it out!
+                        <div class="tab-pane fade show" id="login" role="tabpanel" aria-labelledby="login-tab">
+                            <h3  class="register-heading">Login Form</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <div class="alert alert-success" role="alert" style="display: none;">
+                                        Ok
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control email" placeholder="Email" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" class="form-control password" placeholder="Password" />
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control email" placeholder="Email" />
+                                <div class="col-md-8">
+                                    <input type="submit" id="btnLogin" class="btnRegister"  value="Login"/>
+                                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                                 </div>
                                 <div class="form-group">
                                     <input type="password" class="form-control password" placeholder="Password" />
@@ -78,32 +107,14 @@
     </div>
     <!-- End Register and Login Page -->
 
-    <!-- Calendar Page -->
-    <div class="calendar-page" style="display: none;">
-        <h1 class="align-center">Holidays</h1>
-        <div class="alert alert-success" role="alert" style="display: none;">
-            This is a success alert—check it out!
-        </div>
-        <table class="table" id="tableHoliday">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">No</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Date</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th scope="col" colspan="6"></th>
-                </tr>
-            </tfoot>
-        </table>
-        <!-- <h1 class="align-center">Weekdays</h1>
-              <table class="table">
-                <thead class="thead-light">
+        <!-- Calendar Page -->
+        <div class="calendar-page" style="display: none;">
+            <h1 class="align-center">Holidays</h1>
+            <div class="alert alert-success" role="alert" style="display: none;">
+                Ok
+            </div>           
+            <table class="table" id="tableHoliday">
+                <thead class="thead-dark">
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
@@ -112,24 +123,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
                 </tbody>
                 <tfoot>
                     <tr>
