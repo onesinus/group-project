@@ -6,10 +6,12 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/login_register.css">
     </head>
     <body>
-        <div class="container col-md-12 register">
+        <!-- Register and Login Page -->
+        <div class="container col-md-12 register" style="display: none;">
             <div class="row col-md">
                 <div class="col-md-3 register-left">
                     <img src="img/logo_white.png" alt="Image Login Page"/>
@@ -69,6 +71,69 @@
                 </div>
             </div>
         </div>
+        <!-- End Register and Login Page -->
+
+        <!-- Calendar Page -->
+        <div class="calendar-page" style="display: none;">
+            <h1 class="align-center">Holidays</h1>
+            <div class="alert alert-success" role="alert" style="display: none;">
+                This is a success alert—check it out!
+            </div>           
+            <table class="table" id="tableHoliday">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="col" colspan="6"></th>
+                    </tr>
+                </tfoot>
+              </table>
+              <!-- <h1 class="align-center">Weekdays</h1>
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th scope="col" colspan="6"></th>
+                    </tr>
+                </tfoot>
+              </table> -->
+        </div>
+        <!-- End Calendar Page -->
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -76,6 +141,9 @@
         <script src="config/url.js"></script>
         <script src="js/common.js"></script>
         <script src="js/notification.js"></script>
+        <script src="js/display-page.js"></script>
         <script src="js/main.js"></script>
+
+        <script src="js/calendar-page.js"></script>
     </body>
 </html>

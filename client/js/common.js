@@ -12,3 +12,11 @@ function getFormInput(elem) {
     let password    = $form.find('.password').val();
     return {email, password};
 }
+
+function checkLogin() {
+    if (localStorage.getItem("data-login")) {
+        display('.calendar-page');
+    }else{
+        display('.register');
+    }
+}
