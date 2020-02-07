@@ -16,7 +16,15 @@ $(document).ready(function() {
         const {email, password} = getFormInput($(this));
         login(email, password);
     });
-    
+
+    $(document).on('click', ".btnBasketBall", function(){
+        console.log("reatest");
+        display('.nba-event-page');
+        searchNBAEvent($(this).attr('date'));
+        $(this).closest('tr').next('tr').append("<tr>" + $(".nba-event-page") + "</tr>");
+
+        // $(this).parent().parent().after("<tr>" + $(".nba-event-page") + "</tr>");
+    });
 
     function register(email, password) {
         $.ajax({
@@ -54,7 +62,6 @@ $(document).ready(function() {
                 msg: 'User has been logged in!'
             });
             display('.calendar-page');
-            display('.nba-event-page');
         })
         .catch(err => {
             console.log(err);
@@ -65,8 +72,8 @@ $(document).ready(function() {
         })
     }
 
-    function searchNBAEvent() {
-        const dateEvent = $('#date-event').val()
+    function searchNBAEvent(date) {
+        const dateEvent = date || $('#date-event').val();
     
         $.ajax({
             url: `${BACKEND_URL}/api-nba/searchNBAEvent?dateEvent=${dateEvent}`,

@@ -13,19 +13,6 @@
         <script src="https://apis.google.com/js/platform.js" async defer></script>    
     </head>
     <body>
-        <!-- search nba event -->
-        <div id="search-NBA-event" class="container nba-event-page" style="display: none;">
-            <div class="row">
-                <input type="date" class="form-control col-4 w-25" id="date-event" placeholder="Type Date Event">
-                <button type="submit" class="btn btn-success col-2" id="btn-search-event">Search</button>
-            </div>
-            <div class="row" id="search-NBA-event-list">
-
-            </div>
-
-        </div>
-        <!-- end of search nba event -->
-
         <!-- Register and Login Page -->
         <div class="container col-md-12 register" style="display: none;">
             <div class="row col-md">
@@ -96,13 +83,14 @@
             <div class="alert alert-success" role="alert" style="display: none;">
                 Ok
             </div>           
-            <table class="table" id="tableHoliday">
+            <table class="table holidays-page" id="tableHoliday">
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">No</th>
                     <th scope="col">Name</th>
                     <th scope="col">Description</th>
                     <th scope="col">Date</th>
+                    <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -115,17 +103,31 @@
               </table>
         </div>
         <!-- End Calendar Page -->
+
+        <!-- search nba event -->
+        <div id="search-NBA-event" class="container nba-event-page" style="display: none;">
+            <div class="row"  style="display: none;">
+                <input type="date" class="form-control col-4 w-25 searchDate" id="date-event" placeholder="Type Date Event">
+                <button type="submit" class="btn btn-success col-2" id="btn-search-event">Search</button>
+            </div>
+            <div class="row" id="search-NBA-event-list">
+
+            </div>
+
+        </div>
+        <!-- end of search nba event -->
+
         <script src="js/jquery-3.4.1.min.js"></script>
         <script src="js/popper.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         
         <script src="config/url.js"></script>
+        <script src="js/calendar-page.js"></script>
         <script src="js/main.js"></script>
         <script src="js/common.js"></script>
         <script src="js/notification.js"></script>
         <script src="js/display-page.js"></script>
 
-        <script src="js/calendar-page.js"></script>
         <script src="js/football.js"></script>
 
     </body>
