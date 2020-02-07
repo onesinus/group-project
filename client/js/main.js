@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-
-$(document).ready(function () {
-    console.log('ready')
-})
-
-
-=======
 $(document).ready(function() {
     clearPage();
     checkLogin();
@@ -67,4 +59,3 @@ $(document).ready(function() {
         })
     }
 });
->>>>>>> 56d6a629213ad41d63d65da1dfd755544907f1a0
